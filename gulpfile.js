@@ -68,7 +68,9 @@ gulp.task('buildJs', gulp.series(
 
 gulp.task('compileStyles', () => {
   return gulp.src(path.join(styleDir, '/app.scss'))
-    .pipe(sass({ }).on('error', sass.logError))
+    .pipe(sass({
+      includePaths: path.resolve(__dirname, './node_modules')
+    }).on('error', sass.logError))
     .pipe(nano())
     .pipe(gulp.dest(path.join(distDir, '/css')));
 });
