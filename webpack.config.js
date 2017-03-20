@@ -4,22 +4,24 @@ module.exports = {
   entry: {
     vendor: [
       'whatwg-fetch'
-    ]
+    ],
+    app: './src/js/app.js'
   },
   output: {
-    filename: '[name].js'
+    filename: '[name].js',
+    path: './public/js'
   },
   module: {
-    loaders: [
-      {
-        test: /\.(js|jsx)/,
-        exclude: /node_modules/,
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['es2015']
         }
       }
-    ]
+    }]
   },
   plugins: [new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' })]
 };
