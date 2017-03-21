@@ -24,9 +24,4 @@ $font-family-sans-serif:              'Nunito', Helvetica, Arial, sans-serif;
 @import "./bootstrap/scss/utilities";
 
 @import "nav";
-
-body {
-  // font-family: 'Rubik', sans-serif;
-  // font-family: 'Cabin', sans-serif;
-  // font-family: 'Nunito', sans-serif;
-}
+@import "home";

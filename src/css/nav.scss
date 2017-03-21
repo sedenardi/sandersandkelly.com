@@ -1,4 +1,5 @@
 #nav-bar {
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +21,7 @@
           padding: 20px 10px;
         }
         @include media-breakpoint-down(sm) {
-          padding: 10px 15px;
+          padding: 10px 10px;
         }
         a {
           color: $gray-dark;
