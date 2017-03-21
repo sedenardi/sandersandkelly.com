@@ -1,7 +1,10 @@
 #home {
   padding-top: 66px;
-  @include media-breakpoint-down(sm) {
-    padding-top: 138px;
+  @media (max-width: 410px) {
+    padding-top: 109px;
+  }
+  @media (min-width: 411px) and (max-width: 767px) {
+    padding-top: 73px;
   }
   .img-container {
     position: relative;
@@ -16,7 +19,7 @@
       width: 100%;
       text-align: center;
       color: white;
-      font-family: 'Trocchi', sans-serif;
+      font-family: 'Asul', sans-serif;
       text-shadow: 1px 1px 4px $gray-dark;
       font-size: 2em;
       @include media-breakpoint-down(sm) {
