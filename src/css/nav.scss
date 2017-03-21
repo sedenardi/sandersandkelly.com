@@ -1,0 +1,35 @@
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid $gray-dark;
+  #nav {
+    @extend .container;
+    text-align: center;
+    ul {
+      @extend .clearfix;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        font-size: 1.1em;
+        padding: 20px 15px;
+        @include media-breakpoint-only(md) {
+          padding: 20px 10px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 10px 15px;
+        }
+        a {
+          color: $gray-dark;
+          font-weight: bold;
+        }
+        a:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
