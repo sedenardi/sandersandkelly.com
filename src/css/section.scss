@@ -1,0 +1,24 @@
+.section {
+  @extend .container;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  text-align: center;
+  padding: 0 0 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.centered {
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0 0 2rem;
+  a {
+    color: #005CBF;
+  }
+}
+.centered:last-child {
+  padding: 0;
+}

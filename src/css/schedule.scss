@@ -1,0 +1,22 @@
+.schedule {
+  @extend .row;
+  font-size: 1.25rem;
+  padding-bottom: 2rem;
+}
+.schedule-item {
+  @extend .col-12, .col-sm-4;
+}
+.schedule-item-container {
+  @extend .row;
+}
+.schedule-item-part {
+  @extend .col-6, .col-sm-12;
+  @include media-breakpoint-up(sm) {
+    text-align: center;
+  }
+}
+.schedule-item-time {
+  @include media-breakpoint-down(xs) {
+    text-align: right;
+  }
+}
