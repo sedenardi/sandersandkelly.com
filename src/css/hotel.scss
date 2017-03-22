@@ -1,0 +1,15 @@
+.hotel {
+  @extend .row;
+  padding: 0 0 2rem;
+}
+.hotel-name {
+  @extend .col-12, .col-sm-4;
+  text-align: center;
+  font-size: 1.25rem;
+  @include media-breakpoint-down(xs) {
+    padding: 0 0 1rem;
+  }
+}
+.hotel-info {
+  @extend .col-12, .col-sm-8;
+}
