@@ -18,21 +18,12 @@ gulp.task('cleanDistBuild', () => { return del([path.join(distDir, '/js/**/*')])
 gulp.task('cleanDistStyle', () => { return del([path.join(distDir, '/css/**/*')]); });
 gulp.task('cleanDistHtml', () => { return del([path.join(distDir, '/*.html')]); });
 gulp.task('cleanDistImage', () => { return del([path.join(distDir, '/img/**/*')]); });
-gulp.task('cleanDistAll', gulp.parallel(
-  'cleanDistBuild',
-  'cleanDistStyle',
-  'cleanDistHtml',
-  'cleanDistImage'
-));
+gulp.task('cleanDistAll', () => { return del([path.join(distDir, '/**/*')]); });
 
-gulp.task('copyImages', () => {
-  return gulp.src(path.resolve(__dirname, './src/img/**/*'))
-    .pipe(gulp.dest(path.join(distDir, '/img')));
+gulp.task('copyStatic', () => {
+  return gulp.src(path.resolve(__dirname, './src/static/**/*'))
+    .pipe(gulp.dest(distDir));
 });
-
-gulp.task('copyStatic', gulp.parallel(
-  'copyImages'
-));
 
 gulp.task('webpack', () => {
   return new Promise((resolve, reject) => {
@@ -131,19 +122,11 @@ gulp.task('watchPage', () => {
   ));
 });
 
-gulp.task('watchImages', () => {
-  gulp.watch('img/**/*', gulp.series(
-    'cleanDistImage',
-    'copyImages'
-  ));
-});
-
 gulp.task('watch', gulp.series(
   'defaultDev',
   gulp.parallel(
     'watchJs',
     'watchStyles',
-    'watchPage',
-    'watchImages'
+    'watchPage'
   )
 ));
