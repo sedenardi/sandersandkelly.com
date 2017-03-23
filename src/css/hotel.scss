@@ -2,16 +2,21 @@
   @extend .row;
   padding: 0 0 2rem;
 }
+.hotel-separator {
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 5rem 2rem;
+}
 .hotel-name {
   @extend .col-12, .col-sm-4;
   text-align: center;
   font-size: 1.25rem;
-  .hotel-action {
-    padding: 1rem 0;
-  }
   @include media-breakpoint-down(xs) {
     padding: 0 0 1rem;
   }
+}
+.hotel-action {
+  padding: 1rem 0;
 }
 .hotel-info {
   @extend .col-12, .col-sm-8;

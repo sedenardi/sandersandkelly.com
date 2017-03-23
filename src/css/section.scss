@@ -1,9 +1,14 @@
-.section {
+.section-outer {
+  border-bottom: 1px solid #ccc;
+  font-family: 'Cormorant Garamond', serif;
+}
+.section-outer:last-of-type {
+  border-bottom: none;
+}
+.section-inner {
   @extend .container;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
-  font-family: 'Cormorant Garamond', serif;
 }
 
 .title {
