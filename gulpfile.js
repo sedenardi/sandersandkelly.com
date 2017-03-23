@@ -13,6 +13,7 @@ const nano = require('gulp-cssnano');
 
 const config = require('./config');
 const s3 = require('gulp-s3-upload')(config.AWS);
+const cloudfront = require('gulp-cloudfront-invalidate');
 
 const styleDir = path.resolve(__dirname, './src/css');
 const distDir = path.resolve(__dirname, './public');
@@ -142,7 +143,19 @@ gulp.task('s3Copy', () => {
     }));
 });
 
+gulp.task('invalidate', () => {
+  return gulp.src('*')
+    .pipe(cloudfront({
+      distribution: config.CloudFront.distribution,
+      paths: ['/'],
+      accessKeyId: config.AWS.accessKeyId,
+      secretAccessKey: config.AWS.secretAccessKey,
+      wait: true
+    }));
+});
+
 gulp.task('deploy', gulp.series(
   'default',
-  's3Copy'
+  's3Copy',
+  'invalidate'
 ));
