@@ -6,6 +6,9 @@
   @extend .col-12, .col-sm-4;
   text-align: center;
   font-size: 1.25rem;
+  .hotel-action {
+    padding: 1rem 0;
+  }
   @include media-breakpoint-down(xs) {
     padding: 0 0 1rem;
   }

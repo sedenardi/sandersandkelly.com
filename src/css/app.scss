@@ -1,5 +1,3 @@
-// $font-family-sans-serif:              'Rubik', Helvetica, Arial, sans-serif;
-// $font-family-sans-serif:              'Cabin', Helvetica, Arial, sans-serif;
 $font-family-sans-serif:              'Nunito', Helvetica, Arial, sans-serif;
 
 @import "./bootstrap/scss/variables";
@@ -23,6 +21,7 @@ $font-family-sans-serif:              'Nunito', Helvetica, Arial, sans-serif;
 // Utility classes
 @import "./bootstrap/scss/utilities";
 
+@import "button";
 @import "nav";
 @import "home";
 @import "section";

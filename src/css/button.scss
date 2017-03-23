@@ -1,0 +1,19 @@
+.link-button {
+  color: $gray-dark;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: .8rem;
+  border: 1px solid $gray-dark;
+}
+.link-button:hover {
+  color: $green;
+  text-decoration: none;
+  border: 1px solid $green;
+}
+.link-button:active {
+  color: $green;
+  text-decoration: none;
+  padding: 9px 14px;
+  border: 2px solid $green;
+}
