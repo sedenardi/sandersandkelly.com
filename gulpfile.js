@@ -11,6 +11,9 @@ const webpackConfig = require('./webpack.config');
 const sass = require('gulp-sass');
 const nano = require('gulp-cssnano');
 
+const config = require('./config');
+const s3 = require('gulp-s3-upload')(config.AWS);
+
 const styleDir = path.resolve(__dirname, './src/css');
 const distDir = path.resolve(__dirname, './public');
 
@@ -129,4 +132,17 @@ gulp.task('watch', gulp.series(
     'watchStyles',
     'watchPage'
   )
+));
+
+gulp.task('s3Copy', () => {
+  return gulp.src(path.join(distDir, '/**/*'))
+    .pipe(s3({
+      Bucket: config.S3.Bucket,
+      ACL: config.S3.ACL
+    }));
+});
+
+gulp.task('deploy', gulp.series(
+  'default',
+  's3Copy'
 ));
