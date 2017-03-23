@@ -1,3 +1,2 @@
-import map from './map';
-
-map();
+import './map';
+import './nav';
