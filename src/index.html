@@ -174,7 +174,38 @@
       <div class="section-inner">
         <div class="title">RSVP</div>
         <div class="centered">
-          Coming soon...
+          <form id="rsvp-form" method="post" action="https://script.google.com/macros/s/AKfycbxJa91d83Bok5ChngfUPftsxG-X4EkZvpSSggwvpxfnNT7Zy7kw/exec">
+            <label for="Attending">I'll be there</label>
+            <input type="radio" name="Attending" id="Yes" value="Yes" required>
+            <label for="Attending">Can't make it</label>
+            <input type="radio" name="Attending" id="No" value="No" required>
+            <br />
+            <label for="Name">Name</label>
+            <input type="text" name="Name" id="Name" required>
+            <br />
+            <label for="Others">Are you bringing a guest?</label>
+            <input type="text" name="Others" id="Others">
+            <br />
+            <label for="Hotel">Where are you staying?</label>
+            <input type="text" name="Hotel" id="Hotel" required>
+            <br />
+            <label for="Allergies">Do you have any allergies?</label>
+            <input type="text" name="Allergies" id="Allergies" required>
+            <br />
+            <label for="Songs">Any songs you want to hear?</label>
+            <input type="text" name="Songs" id="Songs" required>
+            <br />
+            <label for="Email">What's your email address?</label>
+            <input type="text" name="Email" id="Email" required>
+            <br />
+            <label for="Phone">What's your phone number?</label>
+            <input type="text" name="Phone" id="Phone" required>
+            <br />
+            <label for="Address">What's your home address?</label>
+            <input type="text" name="Address" id="Address" required>
+            <br />
+            <input type="submit" value="Submit">
+          </form>
         </div>
       </div>
     </div>
