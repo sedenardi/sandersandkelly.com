@@ -1,0 +1,7 @@
+// form-carousel
+$form-carousel-arrow-url: '/img/arrow-right.svg';
+@import "./form-carousel/src/scss/form-carousel";
+
+.form-carousel {
+  font-size: 1.2em;
+}
