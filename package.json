@@ -19,7 +19,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "del": "^2.2.2",
     "eslint": "^3.15.0",
-    "form-carousel": "^1.1.0",
+    "form-carousel": "^1.1.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cloudfront-invalidate": "^0.1.4",
     "gulp-cssnano": "^2.1.2",
