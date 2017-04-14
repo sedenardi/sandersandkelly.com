@@ -3,7 +3,8 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     vendor: [
-      'whatwg-fetch'
+      'whatwg-fetch',
+      'promise-polyfill'
     ],
     app: './src/js/app.js'
   },
