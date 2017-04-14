@@ -4,8 +4,10 @@
     const targetId = e.target.hash.replace('#', '');
     location.hash = targetId;
     const targetElement = document.getElementById(targetId);
-    const navHeight = document.getElementById('nav-bar').clientHeight;
     targetElement.scrollIntoView(true);
-    window.scrollBy(0, (-1 * navHeight));
+    const navHeight = document.getElementById('nav-bar').clientHeight;
+    if (targetElement.getBoundingClientRect().top < navHeight) {
+      window.scrollBy(0, (-1 * navHeight));
+    }
   });
 });
