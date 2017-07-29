@@ -1,0 +1,10 @@
+.registries {
+  @extend .row;
+}
+.registry-item {
+  @extend .col-12, .col-sm-4;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
