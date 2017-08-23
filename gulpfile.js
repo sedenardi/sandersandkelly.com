@@ -147,7 +147,7 @@ gulp.task('invalidate', () => {
   return gulp.src('*')
     .pipe(cloudfront({
       distribution: config.CloudFront.distribution,
-      paths: ['/'],
+      paths: ['/*'],
       accessKeyId: config.AWS.accessKeyId,
       secretAccessKey: config.AWS.secretAccessKey,
       wait: true

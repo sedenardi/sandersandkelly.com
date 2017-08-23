@@ -5,6 +5,9 @@
 }
 .schedule-item {
   @extend .col-12, .col-sm-4;
+  &.single {
+    @extend .col, .align-self-center;
+  }
 }
 .schedule-item-container {
   @extend .row;
@@ -19,4 +22,9 @@
   @include media-breakpoint-down(xs) {
     text-align: right;
   }
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
