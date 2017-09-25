@@ -1,35 +1,25 @@
 .schedule {
-  @extend .row;
   font-size: 1.25rem;
-  @include media-breakpoint-down(xs) {
-    padding-bottom: 2rem;
-  }
-}
-.schedule-item {
-  @extend .col-12, .col-sm-3;
-  padding-bottom: 0.5rem;
-  @include media-breakpoint-up(sm) {
-    padding-bottom: 3rem;
-  }
-  &.single {
-    @extend .col, .align-self-center;
-  }
-  &.three {
-    @extend .col-12, .col-sm-4;
-  }
-}
-.schedule-item-container {
-  @extend .row;
-}
-.schedule-item-part {
-  @extend .col-6, .col-sm-12;
-  @include media-breakpoint-up(sm) {
-    text-align: center;
-  }
-}
-.schedule-item-time {
-  @include media-breakpoint-down(xs) {
-    text-align: right;
+  padding-bottom: 2rem;
+  .schedule-item {
+    padding-bottom: .5rem;
+    .schedule-item-container {
+      @extend .row;
+      .schedule-item-part {
+        @extend .col-6;
+        &.schedule-item-time {
+          text-align: right;
+        }
+      }
+    }
+    &.single {
+      .schedule-item-container {
+        .schedule-item-part {
+          @extend .col-12;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
