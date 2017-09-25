@@ -1,12 +1,21 @@
 .schedule {
   @extend .row;
   font-size: 1.25rem;
-  padding-bottom: 2rem;
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 2rem;
+  }
 }
 .schedule-item {
-  @extend .col-12, .col-sm-4;
+  @extend .col-12, .col-sm-3;
+  padding-bottom: 0.5rem;
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 3rem;
+  }
   &.single {
     @extend .col, .align-self-center;
+  }
+  &.three {
+    @extend .col-12, .col-sm-4;
   }
 }
 .schedule-item-container {
